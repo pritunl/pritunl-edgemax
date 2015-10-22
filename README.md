@@ -53,7 +53,7 @@ curl -O https://raw.githubusercontent.com/pritunl/pritunl-edgemax/master/build/p
 sh pritunl-edgemax.sh
 ```
 
-# Uninstalling
+### Uninstall
 
 To remove the addon login to the cli of the router with either ssh or the cli
 in the web console then run the command below. Installing an EdgeMax upgrade
