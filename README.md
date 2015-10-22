@@ -13,7 +13,7 @@ software. There isn't any possibility of damaging the router or otherwise
 making the router inaccessible or unusable. The addon can be fully removed by
 running the remove script or by re-installing an EdgeMax upgrade image.
 
-![screenshot](screenshot.png)
+![screenshot](img/screenshot.png)
 
 ### upgrade
 
@@ -37,9 +37,9 @@ sh pritunl-edgemax.sh
 
 # uninstalling
 
-To remove the addon login to the cli of the router by with either ssh or the
-cli in the web console. Installing an EdgeMax upgrade image will also remove
-the addon.
+To remove the addon login to the cli of the router with either ssh or the cli
+in the web console then run the command below. Installing an EdgeMax upgrade
+image will also remove the addon.
 
 ```
 sh pritunl-edgemax.sh remove
