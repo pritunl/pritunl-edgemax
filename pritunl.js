@@ -366,6 +366,8 @@ var injectPritunl = function() {
         cipher = val;
       } else if (key === 'keysize') {
         keysize = val;
+      } else if (key === 'auth') {
+        data['hash'] = val.toLowerCase();
       } else if (key === 'push-peer-info') {
         data['openvpn-option'].push('--' + key);
       } else if (
