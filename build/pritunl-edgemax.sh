@@ -1,17 +1,19 @@
 #!/bin/bash
 set -e
-PROFILES_PATH="/config/pritunl"
-LIB_DIR="/var/www/htdocs/lib/1434480045/js"
-PRITUNL_PATH=$LIB_DIR"/pritunl.js"
-EDGE_PATH="/var/www/php/app/classes/api/edge.php"
-EDGE_BAK_PATH="/var/www/php/app/classes/api/edge.php.bak"
-FOOTER_PATH="/var/www/php/app/views/common/footer.php"
-FOOTER_BAK_PATH="/var/www/php/app/views/common/footer.php.bak"
 
 if [ $EUID != 0 ]; then
     sudo sh "$0" "$@"
     exit $?
 fi
+
+BUILD_NUM=`ls /var/www/htdocs/lib | sort -n | tail -1`
+PROFILES_PATH="/config/pritunl"
+LIB_DIR="/var/www/htdocs/lib/"$BUILD_NUM"/js"
+PRITUNL_PATH=$LIB_DIR"/pritunl.js"
+EDGE_PATH="/var/www/php/app/classes/api/edge.php"
+EDGE_BAK_PATH="/var/www/php/app/classes/api/edge.php.bak"
+FOOTER_PATH="/var/www/php/app/views/common/footer.php"
+FOOTER_BAK_PATH="/var/www/php/app/views/common/footer.php.bak"
 
 if [ "$1" == "remove" ]; then
     echo "Removing Pritunl EdgeMax Addon..."
