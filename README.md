@@ -1,4 +1,4 @@
-# pritunl-edgemax: pritunl edgemax addon
+# pritunl-edgemax: Pritunl EdgeMax addon
 
 Pritunl addon for Ubiquiti EdgeRouters, this will add a Pritunl tab to the VPN
 section of the EdgeMax web console. The new section will allow adding a profile
@@ -15,13 +15,30 @@ running the remove script or by re-installing an EdgeMax upgrade image.
 
 ![screenshot](img/screenshot.png)
 
-### upgrade
+### EdgeMax Routers
+
+Below are two Ubuquiti EdgeRouters that are compatible with this addon. Both
+are available on Amazon.
+
+##### EdgeRouter X
+
+[![ubntX](img/ubntX.jpg)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl-20&linkId=HSAPRM4CC524QR7A)
+
+[![amzn](img/amzn.gif)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl-20&linkId=HSAPRM4CC524QR7A)
+
+##### EdgeRouter PoE
+
+[![ubnt5](img/ubnt5.jpg)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
+
+[![amzn](img/amzn.gif)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
+
+### Upgrade
 
 Before installing the addon check that the router is running EdgeMax v1.7.0.
 EdgeMax upgrades can be downloaded at
 [ubnt.com/download/edgemax](https://www.ubnt.com/download/edgemax)
 
-### install
+### Install
 
 To install the addon first login to the cli of the router this can be done with
 ssh or by clicking the cli in the top right of the web interface. Then
@@ -35,7 +52,7 @@ curl -O https://raw.githubusercontent.com/pritunl/pritunl-edgemax/master/build/p
 sh pritunl-edgemax.sh
 ```
 
-# uninstalling
+# Uninstalling
 
 To remove the addon login to the cli of the router with either ssh or the cli
 in the web console then run the command below. Installing an EdgeMax upgrade
