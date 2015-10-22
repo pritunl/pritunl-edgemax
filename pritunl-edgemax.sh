@@ -6,7 +6,7 @@ if [ $EUID != 0 ]; then
     exit $?
 fi
 
-BUILD_NUM=`ls /var/www/htdocs/lib/ | sort -n | tail -1`
+BUILD_NUM=`ls /var/www/htdocs/lib | sort -n | tail -1`
 PROFILES_PATH="/config/pritunl"
 LIB_DIR="/var/www/htdocs/lib/"$BUILD_NUM"/js"
 PRITUNL_PATH=$LIB_DIR"/pritunl.js"
