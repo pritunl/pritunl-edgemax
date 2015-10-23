@@ -46,8 +46,9 @@ def cmd_apply():
     data = json.loads(data)
 
     profiles = []
-    for profile in data['profiles']:
-        iface = profile['interface']
+    for profile in (data['profiles'] or []) + (data['new_profiles'] or []):
+        iface = profile.get('interface') or profile.pop('new_interface')
+        profile['interface'] = iface
 
         if not iface:
             continue
@@ -64,9 +65,15 @@ def cmd_apply():
     mod_ifaces = set()
 
     for profile in profiles:
-        new_ifaces.add(profile['interface'])
-        if profile['conf']:
-            mod_ifaces.add(profile['interface'])
+        iface = profile['interface']
+
+        new_ifaces.add(iface)
+        if profile.get('conf'):
+            if iface in mod_ifaces:
+                send_error(
+                    'Interface "%s" cannot be used for two profiles' % iface)
+                return
+            mod_ifaces.add(iface)
 
     rem_ifaces = cur_ifaces - new_ifaces
 
