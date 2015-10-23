@@ -83,6 +83,10 @@ def cmd_apply():
         for iface in rem_ifaces | mod_ifaces:
             check_call_silent([CFG_CMD, 'delete',
                 'interfaces', 'openvpn', iface])
+            for ext in ('ca', 'cert', 'key', 'tls'):
+                path = os.path.join(CERT_DIR, '%s.%s' % (iface, ext))
+                if os.path.exists(path):
+                    os.remove(path)
 
         for profile in profiles:
             iface = profile['interface']
