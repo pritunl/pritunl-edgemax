@@ -16,6 +16,12 @@ def is_int(string):
         return False
     return True
 
+def send_error(error):
+    print json.dumps({
+        'success': '0',
+        'error': error,
+    })
+
 def check_call_silent(args):
     subprocess.check_call(args, stdout=DEV_NULL, stderr=DEV_NULL)
 
@@ -47,11 +53,8 @@ def cmd_apply():
             continue
 
         if iface[:4] != 'vtun' or not is_int(iface[4:]):
-            print json.dumps({
-                'success': '0',
-                'error': 'Interface %r must be a valid ' % iface +
-                    'interface such as vtun0',
-            })
+            send_error('Interface "%s" must be a valid ' % iface +
+                'interface such as vtun0')
             return
 
         profiles.append(profile)
@@ -262,8 +265,5 @@ try:
     elif sys.argv[2] == 'apply':
         cmd_apply()
 except:
-    print json.dumps({
-        'success': '0',
-        'error': traceback.format_exc(),
-    })
+    send_error(traceback.format_exc())
     raise
