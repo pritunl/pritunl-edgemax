@@ -1,20 +1,6 @@
 # pritunl-edgemax: Pritunl EdgeMax addon
 
-Pritunl addon for [Ubiquiti](https://www.ubnt.com/) EdgeRouters, this will add
-a Pritunl tab to the VPN section of the EdgeMax web console. The new section
-will allow adding a profile by copying the contents of a Pritunl profile. The
-addon will then parse the profile and create an openvpn interface in the `
-interfaces->openvpn` section of the EdgeMax router configuration. The profiles
-can also be removed in the new tab. The EdgeMax operating system already has
-support for OpenVPN this addon is only used to improve the configuration
-management for Pritunl profiles. The addon will only patch two web files for
-the EdgeMax web interface and does not modify any critical system files or
-install any additional software. There isn't any possibility of damaging the
-router or otherwise making the router inaccessible or unusable. The addon can
-be fully removed by running the remove script or by re-installing an EdgeMax
-upgrade image.
-
-![screenshot](img/screenshot.png)
+Pritunl addon for [Ubiquiti](https://www.ubnt.com/) EdgeRouters. This addon will add a new section to the Feature Wizards section of the EdgeMax web console to allow easily add and managing Pritunl vpn profiles.
 
 ### EdgeMax Routers
 
@@ -33,32 +19,18 @@ are available on Amazon.
 
 [![amzn](img/amzn.gif)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
 
-### Upgrade
-
-Before installing the addon check that the router is running EdgeMax v1.7.0.
-EdgeMax upgrades can be downloaded at
-[ubnt.com/download/edgemax](https://www.ubnt.com/download/edgemax)
-
 ### Install
 
-To install the addon first login to the cli of the router this can be done with
-ssh or by clicking the cli in the top right of the web interface. Then
-download the install script then run the script. This will first create a
-backup of the original web files and then install the modified files. Once
-complete reload the web interface and go to the VPN section to access the
-Pritunl tab.
+To install the addon first download the
+[plugin package](https://github.com/pritunl/pritunl-edgemax/raw/master/pritunl-edgemax.tar.gz). Once the package is downloaded go to the Wizards tab
+in the web console and select the + icon next to Features Wizards on the left
+sidebar. Then name the Wizard "Pritunl", upload the plugin package and click
+Save.
 
-```
-curl -O https://raw.githubusercontent.com/pritunl/pritunl-edgemax/master/build/pritunl-edgemax.sh
-sh pritunl-edgemax.sh
-```
+![ubntX](img/screenshot0.png)
+
+![ubntX](img/screenshot1.png)
 
 ### Uninstall
 
-To remove the addon login to the cli of the router with either ssh or the cli
-in the web console then run the command below. Installing an EdgeMax upgrade
-image will also remove the addon.
-
-```
-sh pritunl-edgemax.sh remove
-```
+To remove the addon click Delete From List on the Pritunl Wizard page.
