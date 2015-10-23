@@ -90,7 +90,7 @@ def cmd_apply():
 
         for profile in profiles:
             iface = profile['interface']
-            conf_data = profile['conf']
+            conf_data = profile.get('conf')
 
             if not conf_data:
                 continue
@@ -102,10 +102,7 @@ def cmd_apply():
                 check_call_silent([CFG_CMD, 'set'] + cmd)
 
             for path, data in files.items():
-                if not data:
-                    if os.path.exists(filename):
-                        os.remove(filename)
-                else:
+                if data:
                     with open(path, 'w') as data_file:
                         data_file.write(data)
 
