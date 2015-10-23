@@ -1,0 +1,6 @@
+#!/bin/bash
+cat > /tmp/pritunl.py <<- EOM
+#<script>
+EOM
+
+python2 /tmp/pritunl.py "$0" "$@"
