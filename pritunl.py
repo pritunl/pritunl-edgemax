@@ -61,7 +61,7 @@ def cmd_apply():
         profiles.append(profile)
 
     cur_ifaces = set(get_interfaces())
-    new_ifaces = set(x['interface'] for x in profiles)
+    new_ifaces = set()
     mod_ifaces = set()
 
     for profile in profiles:
@@ -109,6 +109,14 @@ def cmd_apply():
         check_call_silent([CFG_CMD, 'commit'])
         check_call_silent([CFG_CMD, 'save'])
         check_call_silent([CFG_CMD, 'end'])
+
+    for iface_file in os.listdir(CERT_DIR):
+        iface = iface_file.split('.')[0]
+        if iface not in new_ifaces:
+            try:
+                os.remove(os.path.join(CERT_DIR, iface_file))
+            except:
+                pass
 
     print json.dumps({
         'success': '1'
