@@ -6,7 +6,7 @@ console to easily add and managing Pritunl vpn profiles.
 
 ### EdgeMax Routers
 
-Below are two Ubuquiti EdgeRouters that are compatible with this addon. Both
+Below are three Ubuquiti EdgeRouters that are compatible with this addon. Both
 are available on Amazon.
 
 ##### EdgeRouter X
