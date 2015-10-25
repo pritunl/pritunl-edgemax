@@ -13,13 +13,19 @@ are available on Amazon.
 
 [![ubntX](img/ubntX.jpg)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl-20&linkId=HSAPRM4CC524QR7A)
 
-[![amzn](img/amzn.gif)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl-20&linkId=HSAPRM4CC524QR7A)
+[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl-20&linkId=HSAPRM4CC524QR7A)
+
+##### EdgeRouter Lite
+
+[![ubntL](img/ubntL.jpg)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl-20&linkId=6MLKASTDLLYSSNFF)
+
+[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl-20&linkId=6MLKASTDLLYSSNFF)
 
 ##### EdgeRouter PoE
 
 [![ubnt5](img/ubnt5.jpg)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
 
-[![amzn](img/amzn.gif)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
+[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
 
 ### Install
 
