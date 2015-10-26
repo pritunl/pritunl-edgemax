@@ -16,6 +16,14 @@
   clear: left;
 }
 
+.pritunl-profiles .addable .addable-template {
+  padding-top: 20px !important;
+}
+
+.pritunl-profiles .addable .addable-container.first {
+  margin-top: -15px;
+}
+
 .pritunl-profiles .multi {
   width: 484px;
 }
@@ -35,6 +43,11 @@
 
 .pritunl-profiles .profile-conf {
   display: block;
+  margin-bottom: 7px;
+}
+
+.pritunl-profiles .profile-uri {
+  width: 250px;
 }
 </style>
 
@@ -56,7 +69,7 @@
           class="addable-remove">Remove</button></span>
       </div>
     </div>
-    <div class="addable-container"></div>
+    <div class="addable-container first"></div>
     <button type="button" class="addable-add"
       style="display: none">Add New</button>
   </div>
@@ -72,9 +85,13 @@
         <span class="right"><button type="button"
           class="addable-remove">Remove</button></span>
         <span class="profile-conf">
-          <span class="text">Profile</span><textarea name="conf"
+          <span class="text">Profile Data</span><textarea name="conf"
             spellcheck="false"></textarea>
         </span>
+        <span class="text">Profile URI Link</span>
+        <span><input class="profile-uri" type="text" name="conf_link"
+          data-infotip="Pritunl uri link to directly import profile from Pritunl server"
+          /></span>
       </div>
     </div>
     <div class="addable-container"></div>
