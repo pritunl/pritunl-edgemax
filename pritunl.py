@@ -25,6 +25,9 @@ def send_error(error):
 def check_call_silent(args):
     return subprocess.check_call(args, stdout=DEV_NULL, stderr=DEV_NULL)
 
+def check_output_silent(args):
+    return subprocess.check_output(args, stderr=DEV_NULL)
+
 def cmd_load():
     profiles = []
     for iface in get_interfaces():
@@ -123,7 +126,7 @@ def cmd_apply():
     })
 
 def get_interfaces():
-    ifaces = subprocess.check_output(['cli-shell-api', 'listActiveNodes',
+    ifaces = check_output_silent(['cli-shell-api', 'listActiveNodes',
         'interfaces', 'openvpn'])
     return [x[1:-1] for x in ifaces.split()]
 
