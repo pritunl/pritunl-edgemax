@@ -23,7 +23,7 @@ def send_error(error):
     })
 
 def check_call_silent(args):
-    subprocess.check_call(args, stdout=DEV_NULL, stderr=DEV_NULL)
+    return subprocess.check_call(args, stdout=DEV_NULL, stderr=DEV_NULL)
 
 def cmd_load():
     profiles = []
