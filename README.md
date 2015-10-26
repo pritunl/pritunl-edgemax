@@ -1,5 +1,7 @@
 # pritunl-edgemax: Pritunl EdgeMax addon
 
+[![download](https://img.shields.io/badge/download-plugin-55acee.svg?style=flat)](https://github.com/pritunl/pritunl-edgemax/raw/master/pritunl-edgemax.tar.gz)
+
 Pritunl addon for [Ubiquiti](https://www.ubnt.com/) EdgeRouters. This addon
 will add a new section to the Feature Wizards section of the EdgeMax web
 console to easily add and managing Pritunl vpn profiles.
