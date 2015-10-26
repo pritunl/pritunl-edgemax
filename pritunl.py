@@ -9,12 +9,11 @@ CFG_CMD = '/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper'
 CERT_DIR = '/config/pritunl'
 DEV_NULL = open(os.devnull, 'w')
 
-def is_int(string):
+def parse_int(string):
     try:
-        int(string)
+        return int(string)
     except ValueError:
-        return False
-    return True
+        pass
 
 def send_error(error):
     print json.dumps({
@@ -48,7 +47,12 @@ def cmd_apply():
         data = data_file.read()
     data = json.loads(data)
 
+    cur_ifaces = set(get_interfaces())
+    new_ifaces = set()
+    mod_ifaces = set()
+
     profiles = []
+    profile_links = []
     for profile in (data['profiles'] or []) + (data['new_profiles'] or []):
         iface = profile.get('interface') or profile.pop('new_interface')
         profile['interface'] = iface
@@ -56,27 +60,55 @@ def cmd_apply():
         if not iface:
             continue
 
-        if iface[:4] != 'vtun' or not is_int(iface[4:]):
+        iface_num = parse_int(iface[4:])
+        if iface[:4] != 'vtun' or iface_num is None:
             send_error('Interface "%s" must be a valid ' % iface +
                 'interface such as vtun0')
             return
 
-        profiles.append(profile)
-
-    cur_ifaces = set(get_interfaces())
-    new_ifaces = set()
-    mod_ifaces = set()
-
-    for profile in profiles:
-        iface = profile['interface']
-
-        new_ifaces.add(iface)
-        if profile.get('conf'):
-            if iface in mod_ifaces:
-                send_error(
-                    'Interface "%s" cannot be used for two profiles' % iface)
+        conf_link = profile.get('conf_link')
+        if profile.get('conf') or conf_link:
+            if iface in new_ifaces:
+                send_error(('Interface "%s" cannot be ' +
+                    'used for two profiles') % iface)
                 return
             mod_ifaces.add(iface)
+        new_ifaces.add(iface)
+
+        if conf_link:
+            profile_links.append((iface_num, conf_link))
+        else:
+            profiles.append(profile)
+
+    for iface_num, conf_link in profile_links:
+        conf_link = conf_link.replace('https', '')
+        conf_link = conf_link.replace('http', '')
+        conf_link = conf_link.replace('pritunl', '')
+
+        for i, proto in enumerate(('https', 'http')):
+            try:
+                data = json.loads(check_output_silent([
+                    'curl', '--insecure', proto+conf_link]))
+                break
+            except:
+                if i == 1:
+                    send_error('Failed to download profile link "%s"' % (
+                        proto+conf_link))
+                    return
+
+        for i, conf_data in enumerate(data.values()):
+            while True:
+                iface = 'vtun%s' % iface_num
+                if i == 0 or iface not in new_ifaces:
+                    break
+                iface_num += 1
+            new_ifaces.add(iface)
+            mod_ifaces.add(iface)
+
+            profiles.append({
+                'interface': iface,
+                'conf': conf_data,
+            })
 
     rem_ifaces = cur_ifaces - new_ifaces
 
