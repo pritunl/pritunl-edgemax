@@ -1,4 +1,4 @@
-# pritunl-edgemax: Pritunl EdgeMax addon
+# pritunl-edgemax: pritunl edgemax addon
 
 [![download](https://img.shields.io/badge/download-plugin-55acee.svg?style=flat)](https://github.com/pritunl/pritunl-edgemax/raw/master/pritunl-edgemax.tar.gz)
 
