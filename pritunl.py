@@ -243,8 +243,6 @@ def parse_profile(iface, conf_data):
                     'setenv',
                     'ping',
                     'ping-restart',
-                    'connect-retry',
-                    'connect-timeout',
                     'hand-window',
                     'server-poll-timeout',
                     'reneg-sec',

@@ -6,28 +6,7 @@ Pritunl addon for [Ubiquiti](https://www.ubnt.com/) EdgeRouters. This addon
 will add a new section to the Feature Wizards section of the EdgeMax web
 console to easily add and managing Pritunl vpn profiles.
 
-### EdgeMax Routers
-
-Below are three Ubuquiti EdgeRouters that are compatible with this addon. All
-are available on Amazon.
-
-##### EdgeRouter X
-
-[![ubntX](img/ubntX.jpg)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl0e-20&linkId=7NSGT6PIOUD3DDTQ)
-
-[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl0e-20&linkId=7NSGT6PIOUD3DDTQ)
-
-##### EdgeRouter Lite
-
-[![ubntL](img/ubntL.jpg)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl0e-20&linkId=E5GBUA64M2NGTOCG)
-
-[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl0e-20&linkId=E5GBUA64M2NGTOCG)
-
-##### EdgeRouter PoE
-
-[![ubnt5](img/ubnt5.jpg)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl0e-20&linkId=6QRHEIAL77LQJETD)
-
-[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl0e-20&linkId=6QRHEIAL77LQJETD)
+![ubntX](img/screenshot1.png)
 
 ### Install
 
@@ -39,8 +18,6 @@ sidebar. Then name the Wizard "Pritunl", upload the plugin package and click
 Save.
 
 ![ubntX](img/screenshot0.png)
-
-![ubntX](img/screenshot1.png)
 
 ### Uninstall
 
