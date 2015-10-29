@@ -13,21 +13,21 @@ are available on Amazon.
 
 ##### EdgeRouter X
 
-[![ubntX](img/ubntX.jpg)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl-20&linkId=HSAPRM4CC524QR7A)
+[![ubntX](img/ubntX.jpg)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl0e-20&linkId=7NSGT6PIOUD3DDTQ)
 
-[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl-20&linkId=HSAPRM4CC524QR7A)
+[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00YFJT29C/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00YFJT29C&linkCode=as2&tag=pritunl0e-20&linkId=7NSGT6PIOUD3DDTQ)
 
 ##### EdgeRouter Lite
 
-[![ubntL](img/ubntL.jpg)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl-20&linkId=6MLKASTDLLYSSNFF)
+[![ubntL](img/ubntL.jpg)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl0e-20&linkId=E5GBUA64M2NGTOCG)
 
-[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl-20&linkId=6MLKASTDLLYSSNFF)
+[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00HXT8EKE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00HXT8EKE&linkCode=as2&tag=pritunl0e-20&linkId=E5GBUA64M2NGTOCG)
 
 ##### EdgeRouter PoE
 
-[![ubnt5](img/ubnt5.jpg)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
+[![ubnt5](img/ubnt5.jpg)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl0e-20&linkId=6QRHEIAL77LQJETD)
 
-[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl-20&linkId=SHG4FHGP4LE7ZH7T)
+[![amzn](img/amzn.png)](http://www.amazon.com/gp/product/B00E77N3WE/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00E77N3WE&linkCode=as2&tag=pritunl0e-20&linkId=6QRHEIAL77LQJETD)
 
 ### Install
 
