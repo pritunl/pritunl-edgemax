@@ -84,17 +84,14 @@ def cmd_apply():
         conf_link = conf_link.replace('https', '')
         conf_link = conf_link.replace('http', '')
         conf_link = conf_link.replace('pritunl', '')
+        conf_link = 'https' + conf_link
 
-        for i, proto in enumerate(('https', 'http')):
-            try:
-                data = json.loads(check_output_silent([
-                    'curl', '--insecure', proto+conf_link]))
-                break
-            except:
-                if i == 1:
-                    send_error('Failed to download profile link "%s"' % (
-                        proto+conf_link))
-                    return
+        try:
+            data = json.loads(check_output_silent(['curl', conf_link]))
+            break
+        except:
+            send_error('Failed to download profile link "%s"' % conf_link)
+            return
 
         for i, conf_data in enumerate(data.values()):
             while True:
