@@ -3,11 +3,14 @@ import os
 import json
 import subprocess
 import traceback
-import pprint
+import re
 
 CFG_CMD = '/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper'
 CERT_DIR = '/config/pritunl'
 DEV_NULL = open(os.devnull, 'w')
+
+_ip_regex = re.compile(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}')
+_ip6_regex = re.compile(r'\[[a-fA-F0-9:]*\]')
 
 def parse_int(string):
     try:
@@ -86,9 +89,19 @@ def cmd_apply():
         conf_link = conf_link.replace('pritunl', '')
         conf_link = 'https' + conf_link
 
+        args = ['curl']
+
+        if _ip_regex.search(conf_link):
+            args.append('-k')
+        elif _ip6_regex.search(conf_link):
+            args.append('-k')
+            args.append('-g')
+            args.append('-6')
+
+        args.append(conf_link)
+
         try:
-            data = json.loads(check_output_silent(['curl', conf_link]))
-            break
+            data = json.loads(check_output_silent(args))
         except:
             send_error('Failed to download profile link "%s"' % conf_link)
             return
