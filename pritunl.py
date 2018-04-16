@@ -84,10 +84,10 @@ def cmd_apply():
             profiles.append(profile)
 
     for iface_num, conf_link in profile_links:
-        conf_link = conf_link.replace('https', '')
-        conf_link = conf_link.replace('http', '')
-        conf_link = conf_link.replace('pritunl', '')
-        conf_link = 'https' + conf_link
+        conf_link = conf_link.replace('https:', '')
+        conf_link = conf_link.replace('http:', '')
+        conf_link = conf_link.replace('pritunl:', '')
+        conf_link = 'https:' + conf_link
 
         args = ['curl']
 
